@@ -1,1 +1,1 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/cofia-log/sw.js', { scope: '/cofia-log/' })})}
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/coFia-Log/sw.js', { scope: '/coFia-Log/' })})}
