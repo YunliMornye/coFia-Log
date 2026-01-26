@@ -1,0 +1,1046 @@
+/* =========================
+   coFia Log - App.css (FULL)
+   ========================= */
+
+/* base */
+.cofia.page {
+  min-height: 100vh;
+  background: #0f0f10;
+  color: #e8e8ea;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.cofia.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 18px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cofia.appName {
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  font-weight: 650;
+}
+
+.cofia.sub {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.cofia.status {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* desktop: 2 columns */
+.cofia.main {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: 14px;
+  padding: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.cofia.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.cofia.cardTitle {
+  font-size: 14px;
+  font-weight: 650;
+  margin-bottom: 12px;
+}
+
+.cofia.cardTitleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cofia.label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.cofia.input,
+.cofia.textarea {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e8e8ea;
+  outline: none;
+}
+
+.cofia.textarea {
+  resize: vertical;
+}
+
+.cofia.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cofia.primary {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+  color: #111111;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.cofia.ghost {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: #e8e8ea;
+  cursor: pointer;
+}
+
+.cofia.ghostSmall {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: #e8e8ea;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.cofia.primary:disabled,
+.cofia.ghost:disabled,
+.cofia.ghostSmall:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cofia.hint {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.cofia.list {
+  margin: 0;
+  padding-left: 18px;
+  opacity: 0.85;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Preview */
+.cofia.previewBox {
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.22);
+  min-height: 260px;
+}
+
+.cofia.previewTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cofia.previewMeta {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.cofia.previewRow {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 12px;
+  align-items: start;
+}
+
+.cofia.previewNotes {
+  font-size: 13px;
+  opacity: 0.9;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  min-height: 160px;
+}
+
+.cofia.previewRadarMini {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 6px;
+  overflow: hidden;
+}
+
+.cofia.previewFooter {
+  margin-top: 12px;
+  font-size: 12px;
+  opacity: 0.65;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px;
+}
+
+/* History */
+.cofia.historyMeta {
+  font-size: 12px;
+  opacity: 0.65;
+  margin-bottom: 10px;
+}
+
+.cofia.historyList {
+  display: grid;
+  gap: 8px;
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.cofia.historyEmpty {
+  font-size: 13px;
+  opacity: 0.75;
+  padding: 10px 0;
+}
+
+/* ✅ row with 2 buttons */
+.cofia.historyRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.cofia.historyMain {
+  text-align: left;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.18);
+  color: #e8e8ea;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.cofia.historyMain:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cofia.historyRow.isActive .cofia.historyMain {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cofia.historyAction {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8e8ea;
+  padding: 10px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cofia.historyAction:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cofia.historyTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.cofia.historyName {
+  font-size: 13px;
+  font-weight: 650;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cofia.historyTime {
+  font-size: 11px;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.cofia.historySub {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cofia.historyBean {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 240px;
+}
+
+.cofia.lotChip {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+  color: #e8e8ea;
+  font-size: 11px;
+  opacity: 0.92;
+  cursor: pointer;
+}
+
+.cofia.lotChip:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cofia.lotChipPlaceholder {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.12);
+  font-size: 11px;
+  opacity: 0.55;
+}
+
+/* Timer */
+.cofia.timerDisplay {
+  font-size: 34px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  padding: 8px 2px 12px;
+}
+
+.cofia.timerActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.cofia.timerLapRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.cofia.lapBtn {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8e8ea;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.cofia.lapBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cofia.timerLaps {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.cofia.timerEmpty {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.cofia.timerLapItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.cofia.timerLapLabel {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.cofia.timerLapTime {
+  font-size: 12px;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+/* DTR */
+.cofia.dtrGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cofia.dtrBox {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 10px 10px;
+}
+
+.cofia.dtrLabel {
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.cofia.dtrValue {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.cofia.dtrNote {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* Radar */
+.cofia.radarWrap {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.cofia.radarChartBox {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 6px;
+}
+
+.cofia.radarControls {
+  display: grid;
+  gap: 10px;
+}
+
+.cofia.radarRow {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.cofia.radarTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cofia.radarName {
+  font-weight: 650;
+}
+
+.cofia.radarVal {
+  opacity: 0.75;
+}
+
+.cofia.radarSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Lot key row */
+.cofia.lotRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.cofia.lotBtn {
+  height: 34px;
+}
+
+/* Footer */
+.cofia.footer {
+  padding: 10px 18px 18px;
+  opacity: 0.6;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cofia.footerText {
+  letter-spacing: 0.2px;
+}
+
+.cofToast {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* iPhone / narrow */
+@media (max-width: 860px) {
+  .cofia.main {
+    grid-template-columns: 1fr;
+  }
+
+  .cofia.previewSection { order: 1; }
+  .cofia.timerSection { order: 2; }
+  .cofia.dtrSection { order: 3; }
+  .cofia.radarSection { order: 4; }
+  .cofia.inputSection { order: 5; }
+  .cofia.historySection { order: 6; }
+  .cofia.nextSection { order: 7; }
+
+  .cofia.actions,
+  .cofia.timerActions {
+    gap: 8px;
+  }
+
+  .cofia.primary,
+  .cofia.ghost {
+    flex: 1;
+  }
+
+  .cofia.historyList {
+    max-height: 320px;
+  }
+
+  .cofia.timerDisplay {
+    font-size: 38px;
+  }
+
+  .cofia.previewRow {
+    grid-template-columns: 1fr;
+  }
+
+  .cofia.radarWrap {
+    grid-template-columns: 1fr;
+  }
+
+  .cofia.lotRow {
+    grid-template-columns: 1fr;
+  }
+
+  .cofia.lotBtn {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ✅ history button layout for iPhone */
+  .cofia.historyRow {
+    grid-template-columns: 1fr;
+  }
+  .cofia.historyAction {
+    width: 100%;
+  }
+}
+
+/* -------------------- Fia card toggle + bubble -------------------- */
+.cofia.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  opacity: 0.9;
+  user-select: none;
+}
+.cofia.toggle input {
+  width: 18px;
+  height: 18px;
+}
+
+.cofia.previewBox.clean {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.08));
+}
+
+.cofia.previewBox.fia {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: radial-gradient(1200px 500px at 20% 0%, rgba(255, 255, 255, 0.05), rgba(0,0,0,0.12)),
+    linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.10));
+}
+
+.cofia.fiaBubble {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cofia.fiaAvatarWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.cofia.fiaAvatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cofia.fiaBubbleBody {
+  display: grid;
+  gap: 6px;
+}
+
+.cofia.fiaBubbleTop {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.cofia.fiaTag {
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.2px;
+}
+
+.cofia.fiaSmall {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.cofia.fiaText {
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+/* -------------------- History actions layout -------------------- */
+.cofia.historyActions {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+
+.cofia.historyDelete {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 122, 122, 0.35);
+  background: rgba(255, 122, 122, 0.10);
+  color: rgba(255, 210, 210, 0.95);
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+.cofia.historyDelete:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* -------------------- Timer done hint -------------------- */
+.cofia.timerDone {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 162, 255, 0.28);
+  background: rgba(122, 162, 255, 0.08);
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+/* Drop button subtle emphasis */
+.cofia.lapBtn.drop {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* -------------------- Settings -------------------- */
+.cofia.settingsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cofia.settingsNote {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.cofia.danger {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 122, 122, 0.35);
+  background: rgba(255, 122, 122, 0.10);
+  color: rgba(255, 210, 210, 0.95);
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+.cofia.danger:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ==================== EXPORT OVERRIDES ==================== */
+/* 画面は雰囲気、PNGは安定を優先（グラデ/フィルタを切る） */
+.cofia.previewBox[data-exporting="1"],
+.cofia.previewBox.clean[data-exporting="1"],
+.cofia.previewBox.fia[data-exporting="1"] {
+  background: #0f0f10 !important;
+  background-image: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* ==================== Antique Card (NO ASSETS) ==================== */
+/* 使い方：previewBox に "cardAntique" を付ける */
+
+/* カード全体の“紙＋古書”っぽさ */
+.cofia.previewBox.cardAntique{
+  position: relative;
+  overflow: hidden;
+
+  /* 余白をアンティークっぽく増やす */
+  padding: 34px 34px 22px;
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.10);
+
+  /* serif寄せ（外部フォントなし） */
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+
+  /* 多重背景：場所ごとの濃淡（均一さを壊す） */
+  background:
+    radial-gradient(900px 600px at 10% 8%, rgba(255,255,255,0.08), rgba(0,0,0,0) 60%),
+    radial-gradient(800px 700px at 85% 90%, rgba(0,0,0,0.55), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(22,18,16,0.94), rgba(12,12,14,0.94));
+}
+
+/* “粒子/紙目”っぽい疑似ノイズ（画像なし） */
+.cofia.previewBox.cardAntique::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0.22;
+
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, rgba(0,0,0,0) 1px 3px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.035) 0 1px, rgba(0,0,0,0) 1px 4px),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 1px, rgba(0,0,0,0) 1px 6px);
+  mix-blend-mode: overlay;
+}
+
+/* 外枠＋内枠（装飾フレーム風：画像なし） */
+.cofia.previewBox.cardAntique::after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  pointer-events:none;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(18px 18px at 0% 0%, rgba(255,255,255,0.18), rgba(0,0,0,0) 70%),
+    radial-gradient(18px 18px at 100% 0%, rgba(255,255,255,0.16), rgba(0,0,0,0) 70%),
+    radial-gradient(18px 18px at 0% 100%, rgba(255,255,255,0.12), rgba(0,0,0,0) 70%),
+    radial-gradient(18px 18px at 100% 100%, rgba(255,255,255,0.12), rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.12),
+    inset 0 0 0 2px rgba(0,0,0,0.55),
+    0 18px 70px rgba(0,0,0,0.55);
+  opacity: 0.9;
+}
+
+/* タイトル：活字っぽさ＋インクの滲み（data-textで疑似複製） */
+.cofia.previewBox.cardAntique .cofia.previewTitle{
+  position: relative;
+  font-size: 42px;
+  letter-spacing: 0.4px;
+  font-weight: 750;
+  margin-bottom: 14px;
+  color: rgba(245,238,227,0.96);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+}
+
+/* NOTE:
+   これを効かせるには JSX で
+   <div className="cofia previewTitle" data-text={...}>...</div>
+   のように data-text を付けてね（後で指示する） */
+.cofia.previewBox.cardAntique .cofia.previewTitle::after{
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: rgba(245,238,227,0.35);
+  transform: translate(1px, 1px);
+  filter: blur(1.2px);
+  pointer-events: none;
+}
+
+/* メタ：小さめ＋淡く */
+.cofia.previewBox.cardAntique .cofia.previewMeta{
+  font-size: 16px;
+  opacity: 0.78;
+  color: rgba(245,238,227,0.84);
+  margin-bottom: 18px;
+}
+
+/* 本文レイアウト：2カラムを“余白多め”に */
+.cofia.previewBox.cardAntique .cofia.previewRow{
+  grid-template-columns: 1fr 340px;
+  gap: 18px;
+  align-items: start;
+}
+
+/* ノート：紙の上のインクっぽく + 手帳っぽい縦罫 */
+.cofia.previewBox.cardAntique .cofia.previewNotes{
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(245,238,227,0.90);
+  opacity: 0.95;
+  min-height: 420px;
+
+  border-left: 1px solid rgba(245,238,227,0.10);
+  padding-left: 22px;
+}
+
+/* レーダー枠：ガラスっぽさを抑えて“印刷図版”へ */
+.cofia.previewBox.cardAntique .cofia.previewRadarMini{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.12);
+  padding: 12px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.40);
+}
+
+/* レーダー線・面：図版化（インク色/細線） */
+.cofia.previewBox.cardAntique .cofia.radarGrid{
+  stroke: rgba(245,238,227,0.10);
+}
+.cofia.previewBox.cardAntique .cofia.radarAxis{
+  stroke: rgba(245,238,227,0.10);
+}
+.cofia.previewBox.cardAntique .cofia.radarPoly{
+  fill: rgba(245,238,227,0.10);
+  stroke: rgba(245,238,227,0.28);
+  stroke-width: 1.2;
+}
+.cofia.previewBox.cardAntique .cofia.radarDot{
+  fill: rgba(245,238,227,0.70);
+}
+.cofia.previewBox.cardAntique .cofia.radarLabel{
+  fill: rgba(245,238,227,0.72);
+  font-size: 12px;
+}
+
+/* Fia吹き出し：紙片＋“貼り紙”感（少し回転 + ピンの光） */
+.cofia.previewBox.cardAntique .cofia.fiaBubble{
+  margin-top: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    radial-gradient(700px 220px at 20% 20%, rgba(255,255,255,0.12), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(240,230,214,0.14), rgba(240,230,214,0.09));
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(0,0,0,0.35);
+  padding: 14px 14px;
+
+  transform: rotate(-0.3deg);
+}
+
+.cofia.previewBox.cardAntique .cofia.fiaBubble::after{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 24px;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35), rgba(0,0,0,0) 70%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* アバター枠：額縁っぽく */
+.cofia.previewBox.cardAntique .cofia.fiaAvatarWrap{
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.20);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.40);
+}
+
+/* 吹き出し見出し */
+.cofia.previewBox.cardAntique .cofia.fiaTag{
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(245,238,227,0.95);
+}
+.cofia.previewBox.cardAntique .cofia.fiaSmall{
+  font-size: 13px;
+  opacity: 0.75;
+  color: rgba(245,238,227,0.85);
+}
+
+/* 吹き出し本文 */
+.cofia.previewBox.cardAntique .cofia.fiaText{
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(245,238,227,0.92);
+}
+
+/* フッター：区切り線を薄く、活字っぽく */
+.cofia.previewBox.cardAntique .cofia.previewFooter{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(245,238,227,0.12);
+  font-size: 14px;
+  color: rgba(245,238,227,0.72);
+  opacity: 0.9;
+}
+
+/* iPhoneで縦1カラム */
+@media (max-width: 860px) {
+  .cofia.previewBox.cardAntique{
+    padding: 26px 22px 18px;
+  }
+  .cofia.previewBox.cardAntique .cofia.previewTitle{
+    font-size: 34px;
+  }
+  .cofia.previewBox.cardAntique .cofia.previewRow{
+    grid-template-columns: 1fr;
+  }
+  .cofia.previewBox.cardAntique::after{
+    inset:10px;
+  }
+}
+/* ==================== /Antique Card ==================== */
+/* ===== cardAntique 微調整（差分だけ）===== */
+
+/* 1) タイトル：インクが沈む感じを少し足す（影を“影っぽくない影”に） */
+.cofia.previewBox.cardAntique .cofia.previewTitle{
+  text-shadow:
+    0 1px 0 rgba(0,0,0,0.60),
+    0 3px 10px rgba(0,0,0,0.55);
+}
+
+/* 2) メタ：章立ての区切りを作って“間延び”を止める */
+.cofia.previewBox.cardAntique .cofia.previewMeta{
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(245,238,227,0.12);
+  margin-bottom: 16px; /* 既存の余白を少し整理 */
+}
+
+/* 3) Notes：書き始めの“起点”を作る（1行目だけ少し強く） */
+.cofia.previewBox.cardAntique .cofia.previewNotes::first-line{
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+
+/* 4) Notes：左罫線をほんの少しだけ見せる（すでに入れてるなら上書き強化） */
+.cofia.previewBox.cardAntique .cofia.previewNotes{
+  padding-left: 18px;
+  border-left: 1px solid rgba(245,238,227,0.14);
+}
+
+/* 5) Fia：貼ってある感（位置をほんの少しズラす） */
+.cofia.previewBox.cardAntique .cofia.fiaBubble{
+  margin-left: 6px;
+}
+
+/* iPhone時：余白調整（締まりを維持） */
+@media (max-width: 860px){
+  .cofia.previewBox.cardAntique .cofia.previewMeta{
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+  .cofia.previewBox.cardAntique .cofia.fiaBubble{
+    margin-left: 0;
+  }
+}
+/* ===== Fia バブル重なり修正（差分）===== */
+
+/* グリッド列を少し広げて、文字の侵入を防ぐ */
+.cofia.previewBox.cardAntique .cofia.fiaBubble{
+  grid-template-columns: 64px 1fr; /* ← 44px → 64px */
+}
+
+/* テキスト側を明示的に右カラムへ固定 */
+.cofia.previewBox.cardAntique .cofia.fiaBubbleBody{
+  grid-column: 2;
+}
+
+/* 見出しと本文の開始位置を揃える */
+.cofia.previewBox.cardAntique .cofia.fiaTag,
+.cofia.previewBox.cardAntique .cofia.fiaText{
+  margin-left: 0;
+}
+
+/* アバターを少し下げて“貼ってある感”を保つ */
+.cofia.previewBox.cardAntique .cofia.fiaAvatarWrap{
+  margin-top: 2px;
+}
+
+/* iPhone時も安全側に */
+@media (max-width: 860px){
+  .cofia.previewBox.cardAntique .cofia.fiaBubble{
+    grid-template-columns: 56px 1fr;
+  }
+}
+/* ===== History 被り修正（差分）===== */
+
+/* 1fr 側がちゃんと縮むようにする */
+.cofia.historyRow{
+  grid-template-columns: minmax(0, 1fr) auto; /* ← ここが大事 */
+  align-items: start;
+}
+
+/* これが原因：width:100% を無効化して、はみ出し防止 */
+.cofia.historyMain{
+  width: auto;     /* ← 100% をやめる */
+  min-width: 0;    /* ← gridで省略表示が効く */
+}
+
+/* 右側ボタンの列を安定させる（任意だけど効く） */
+.cofia.historyActions{
+  min-width: 140px;
+}
+
+/* 中身が長い時に押し出さない */
+.cofia.historyBean,
+.cofia.historyName{
+  min-width: 0;
+}
