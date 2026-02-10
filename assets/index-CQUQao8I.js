@@ -80,18 +80,39 @@ Instagram用の縦長4:5（1080x1350）の情報カードデザインを生成�
 TITLE AREA（上部）
 ================================
 カード上部に十分な余白を確保する。
-文字・記号・タイトル・国名・ORIGIN等は一切描画しない。
+このエリアには
+・文字
+・記号
+・タイトル
+・国名
+・ORIGIN等
+一切描画しない。
 
-後から画像編集ソフトで
-タイトルや生産国名を追加できる前提の
-“完全な空白”として残す。
+後から画像編集ソフトで文字を追加できる前提の
+**完全な空白エリア**として残す。
+
+================================
+INFO LABEL AREA（上部〜中段）
+================================
+以下の項目名のみを縦に配置する：
+
+Origin:
+Farm/Producer:
+Variety:
+Process:
+Altitude:
+
+・項目名のみ表示する
+・罫線、下線、記入用ライン、枠線は一切描画しない
+・入力補助を想起させる装飾は禁止
+・文字は控えめで上品
 
 ================================
 FLAVOR RADAR（中央）
 ================================
 カード中央にレーダーチャートを配置。
 
-軸ラベルは英語表記で表示：
+軸ラベルは英語表記：
 Sweetness
 Juiciness
 Floral
@@ -100,29 +121,29 @@ Clarity
 Body
 
 ・数値スケール（0–10）は表示してよい
-・目盛（グリッド）は表示してよい
-・数値は控えめで、うるさくならないように
-
-レーダーチャートは
-・細い線
-・単色（半透明）
+・グリッド表示可
+・細い線のみ
+・単色・半透明
 ・フラット（3D禁止）
 
 ================================
-TEXT AREA（下部）
+NOTE AREA（下部）
 ================================
-カード下部にも十分な余白を確保。
+セクション見出しとして
+**NOTE**
+のみを表示する。
 
-Farm / Process / Altitude / Notes など
-可変テキスト情報は一切表示しない。
+・横線、下線、区切り線、装飾ラインは一切描画しない
+・本文テキストは表示しない
+・余白を十分に確保する
 
 ================================
 STYLE
 ================================
 ・ダークトーン（黒〜チャコール）
 ・アクセントカラーは1色のみ（淡いゴールド／銅／落ち着いたオレンジ系）
-・情報カードとしての品位を重視
 ・装飾は主張しすぎない
+・情報カードとしての品位を重視
 
 右下にごく小さく「coFia Log」を配置。
 
@@ -139,11 +160,13 @@ Body: ${V}
 ================================
 NEGATIVE PROMPT
 ================================
-写真, 実写, 背景画像, コーヒー器具,
-粒子ノイズ, 紙テクスチャ, ヴィンテージ汚れ,
-強い光, レンズフレア, 3D表現,
+写真, 実写, 背景画像, 質感素材, 紙テクスチャ, 粒子ノイズ,
+罫線, 下線, 記入用ライン, 区切り線,
+NOTE-という表記, 装飾ライン付きNOTE,
 ORIGINという文字, タイトル文字,
-情報過多, 過剰装飾, 低解像度, ぼやけた線
+過剰装飾, 3D表現, 強い光, レンズフレア,
+低解像度, ぼやけた線
+
 `.trim()}const Qs="cofia:lastActiveLogId";function Rc(d){try{d!=null?localStorage.setItem(Qs,String(d)):localStorage.removeItem(Qs)}catch{}}function fp(){try{const d=localStorage.getItem(Qs);return d!=null?Number(d):null}catch{return null}}function _m({values:d,size:v=240}){const w=["Sweetness","Juiciness","Floral","Funk","Clarity","Body"],m=w.length,z=v/2,B=v/2,V=v*.36,F=Math.round(v*.12),J=St=>{const mt=V*St/10;return Array.from({length:m},(_t,Gt)=>{const Mt=-Math.PI/2+Gt*2*Math.PI/m;return[z+mt*Math.cos(Mt),B+mt*Math.sin(Mt)]})},Y=J(10),gt=J(10).map((St,mt)=>{const _t=Ca(d[mt]),Gt=V*_t/10,Mt=-Math.PI/2+mt*2*Math.PI/m;return[z+Gt*Math.cos(Mt),B+Gt*Math.sin(Mt)]}),at=St=>St.map((mt,_t)=>`${_t===0?"M":"L"} ${mt[0].toFixed(2)} ${mt[1].toFixed(2)}`).join(" ")+" Z",yt=[2,4,6,8,10];return O.jsxs("svg",{className:"cofia radarSvg",viewBox:`${-F} ${-F} ${v+F*2} ${v+F*2}`,role:"img","aria-label":"Flavor radar",children:[O.jsx("style",{children:`
         .radarGrid { stroke: var(--radar-grid, rgba(255,255,255,0.18)); fill: none; }
         .radarAxis { stroke: var(--radar-axis, rgba(255,255,255,0.18)); }
